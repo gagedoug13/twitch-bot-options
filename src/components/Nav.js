@@ -12,6 +12,9 @@ export default function Nav() {
             <div className='merchDiv'>
                 <h2>Merch</h2>
             </div>
+            <div className='navButtonDiv'>
+                <button className='navButton'>MB</button>
+            </div>
         </div>
     )
 }

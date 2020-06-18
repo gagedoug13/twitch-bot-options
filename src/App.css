@@ -67,15 +67,17 @@ table {
   justify-content: center;
   height: 40vh;
   width: 100vw;
+  background: url('https://i.ya-webdesign.com/images/robot-gif-png-12.gif');
 }
 
 .robotIntroduction {
   display: flex;
   align-items: center;
   width: 55vw;
-  height: 40vh;
+  height: 90vh;
 }
 
 .font1 {
   font-size: 20px;
 }
+
