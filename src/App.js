@@ -21,7 +21,7 @@ function App() {
   // }
 
   fetch(`http://192.168.1.117:3001/useroptions?${code ? 'code=' + code : ''}`, {
-      // mode: 'no-cors',
+      mode: 'no-cors',
       credentials: 'include'
     })
     .then(response => response.json())
