@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Main from './components/Main'
+import Nav from './components/Nav'
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>welcome</h1>
+      <Nav />
       <Main />
     </div>
   );
