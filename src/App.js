@@ -1,40 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './App.css';
 import Main from './components/Main'
-import Nav from './components/Nav'
 
+export default class App extends Component {
 
-function App() {
-
-  let code = window.location.search.split('&')[0].split('=')[1]
-
-
-  // if (code) {
-  //   fetch(`http://192.168.1.117:3001/useroptions?code=${code}`, {
-  //     // mode: 'no-cors',
-  //     credentials: 'include'
-  //   })
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))   
-  // } else {
-  //   console.log('no code was present in the window')
-  // }
-
-  fetch(`http://192.168.1.117:3001/useroptions?${code ? 'code=' + code : ''}`, {
-      mode: 'no-cors',
+  
+  componentDidMount() {
+    let code = window.location.search.split('&')[0].split('=')[1]
+    window.history.replaceState({ id: 'dashboard' }, 'Dashboard', 'http://localhost:3002')
+  
+    var options = null
+  
+    fetch(`http://localhost:3001/useroptions?${code ? 'code=' + code : ''}`, {
+      // mode: 'no-cors',
       credentials: 'include'
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
+      .then(response => response.json())
+      .then(data => options = data.options)
+  
+  }
+  
+  updateOptions = async () => {
+    options.history = true
+    console.log(options)
+    fetch('http://localhost:3001/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(options),
+      credentials: 'include',
+    })
+  }
 
-
-
-  return (
-    <div className="App">
-      <Nav />
+  render() {
+    return (
+      <div>
+        <h1>welcome</h1>
+      <button onClick={updateOptions}>update</button>
       <Main />
-    </div>
-  );
+      </div>
+    )
+  }
 }
-
-export default App;
