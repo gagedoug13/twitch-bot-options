@@ -48,9 +48,12 @@ export default class App extends Component {
     console.log(this.state.options)
     return (
       <div>
-        <h1>welcome</h1>
-      <button onClick={this.updateOptions}>update</button>
-      <Main />
+      {this.state.options ?
+      //  <button onClick={this.updateOptions}>update</button>
+       <Main />
+       : null
+      }
+     
       </div>
     )
   }
