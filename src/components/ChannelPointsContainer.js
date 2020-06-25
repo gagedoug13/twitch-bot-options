@@ -4,8 +4,8 @@ export default function ChannelPointsContainer() {
     return (
         <div className='channelPointsContainer'>
             <div className='eachRewardContainer'>
-                <h1>Create A Secret Word.</h1>
-                <h2 className='rewardDescription'>insert a description.</h2>
+                <h1>Secret Word</h1>
+                <h2 className='rewardDescription'>Create a secret word.</h2>
 
                 <label className="switch">
                     <input type="checkbox"/>
@@ -13,8 +13,8 @@ export default function ChannelPointsContainer() {
                 </label>
             </div>
             <div className='eachRewardContainer'>
-                <h1>Spam Something In Chat.</h1>
-                <h2 className='rewardDescription'>insert a description.</h2>
+                <h1>Spam</h1>
+                <h2 className='rewardDescription'>Spam something in chat 10 times.</h2>
 
                 <label className="switch">
                     <input type="checkbox"/>

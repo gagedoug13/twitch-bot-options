@@ -67,7 +67,7 @@ table {
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background: gray;
 }
@@ -88,14 +88,14 @@ table {
   /* display: flex;
   justify-content: center; */
   /* align-items: center; */
-  height: 80vh;
+  height: 100%;
   width: 85vw;
   background: white;
   margin-left: 5vw;
 }
 
 .commandsContainer {
-  height: 45vh;
+  height: 100%;
   width: 80vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
@@ -104,7 +104,16 @@ table {
 }
 
 .channelPointsContainer {
-  height: 13vh;
+  height: 100%;
+  width: 80vw;
+  margin-bottom: 5vh;
+  margin-top: 1vh;
+  margin-left: 1vh;
+  background: white;
+}
+
+.otherContainer {
+  height: 100%;
   width: 80vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
@@ -121,6 +130,14 @@ table {
 }
 
 .eachRewardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10vh;
+  background: grey;
+}
+
+.eachOtherContainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
