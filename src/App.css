@@ -64,9 +64,9 @@ table {
 }
 
 .mainDiv {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   height: 100vh;
   width: 100vw;
   background: gray;
@@ -91,6 +91,7 @@ table {
   height: 80vh;
   width: 85vw;
   background: white;
+  margin-left: 5vw;
 }
 
 .commandsContainer {
@@ -193,4 +194,66 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.signOutButton{
+  display:inline-block;
+  padding:0.2em 1.45em;
+  margin:0.1em;
+  margin-top: 4vh;
+  border:0.1em solid #FFFFFF;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-size: 3vh;
+  font-family:'Segoe UI','Roboto',sans-serif;
+  font-weight:400;
+  color:red;
+  background-color:transparent;
+  text-align:center;
+  position:relative;
+}
+  .signOutButton:hover{
+  border-color: black;
+  color: black;
+  }
+  .signOutButton:active{
+  border-color: white;
+  color: white;
+  }
+  @media all and (max-width:30em){
+  .signOutButton{
+  display:block;
+  margin:0.2em auto;
+  }
+}
+
+.disconnectButton{
+  display:inline-block;
+  padding:0.2em 1.45em;
+  margin:0.1em;
+  margin-top: 4vh;
+  border:0.1em solid #FFFFFF;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-size: 3vh;
+  font-family:'Segoe UI','Roboto',sans-serif;
+  font-weight:400;
+  color:red;
+  background-color:transparent;
+  text-align:center;
+  position:relative;
+}
+  .disconnectButton:hover{
+  border-color: black;
+  color: black;
+  }
+  .disconnectButton:active{
+  border-color: white;
+  color: white;
+  }
+  @media all and (max-width:30em){
+  .disconnectButton{
+  display:block;
+  margin:0.2em auto;
+  }
 }
