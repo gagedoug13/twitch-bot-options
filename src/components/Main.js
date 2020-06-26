@@ -3,11 +3,11 @@ import React from 'react'
 import OptionsContainer from './OptionsContainer'
 import BotButtonsContainer from './BotButtonsContainer'
 
-export default function Main() {
+export default function Main(props) {
     return (
         <div className='mainDiv'>
             {/* <Nav /> */}
-            <OptionsContainer />
+            <OptionsContainer data={props.data} switchHandler={props.switchHandler} />
 
             <BotButtonsContainer />
 

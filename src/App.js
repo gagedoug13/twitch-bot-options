@@ -6,10 +6,33 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      options: 'something'
+      userInfo: {
+        twitchDetails: null,
+        options: {
+          history: true,
+          trivia: true,
+          slots: true,
+          atRobotApe: true,
+          awardPoints: true,
+          recordChat: true,
+          secretWord: true,
+          spamMessage: true
+        }
+      }
     };
   }
   
+
+  switchHandler = (event) => {
+    // console.log(event.target.checked, "target value")
+    this.setState({
+      userInfo: {
+        options: {
+          [event.target.name]: event.target.checked
+        }
+      }
+    })
+  } 
   
   componentDidMount() {
     let code = window.location.search.split('&')[0].split('=')[1]
@@ -23,6 +46,7 @@ export default class App extends Component {
     })
       .then(response => response.json())
       .then(data => {
+        console.log(data)
         options = data.options
         this.setState({
           options: data.options
@@ -45,12 +69,12 @@ export default class App extends Component {
 }
 
   render() {
-    console.log(this.state.options)
+    console.log(this.state.userInfo)
     return (
       <div>
-      {this.state.options ?
+      {this.state.userInfo ?
       //  <button onClick={this.updateOptions}>update</button>
-       <Main />
+       <Main data={this.state} switchHandler={this.switchHandler} />
        : null
       }
      

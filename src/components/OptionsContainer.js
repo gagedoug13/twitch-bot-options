@@ -3,15 +3,15 @@ import CommandsContainer from './CommandsContainer'
 import ChannelPointsContainer from './ChannelPointsContainer'
 import OtherContainer from './OtherContainer'
 
-export default function OptionsContainer() {
+export default function OptionsContainer(props) {
     return (
         <div className='optionsContainer'>
             <h1>Commands</h1>
-            <CommandsContainer />
+            <CommandsContainer data={props.data} switchHandler={props.switchHandler} />
             <h1>Channel Points</h1>
-            <ChannelPointsContainer />
+            <ChannelPointsContainer data={props.data} switchHandler={props.switchHandler}/>
             <h1>Other Options</h1>
-            <OtherContainer />
+            <OtherContainer data={props.data} switchHandler={props.switchHandler}/>
         </div>
     )
 }
