@@ -6,32 +6,33 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: {
+
         twitchDetails: null,
-        options: {
-          history: true,
-          trivia: true,
-          slots: true,
-          atRobotApe: true,
-          awardPoints: true,
-          recordChat: true,
-          secretWord: true,
-          spamMessage: true
-        }
-      }
+        initialOptions: null,
+        currentOptions: null,
+      
     };
+
+    // this.areIdenticalObjects = this.areIdenticalObjects.bind(this)
   }
   
 
+  areIdenticalObjects = () => {
+    return Object.keys(this.state.initialOptions).some(key => 
+      this.state.currentOptions[key] !== this.state.initialOptions[key]
+    )
+  }
+
   switchHandler = (event) => {
     // console.log(event.target.checked, "target value")
+    
     this.setState({
-      userInfo: {
-        options: {
+        currentOptions: {
+          ...this.state.currentOptions,
           [event.target.name]: event.target.checked
         }
-      }
     })
+    
   } 
   
   componentDidMount() {
@@ -46,10 +47,12 @@ export default class App extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         options = data.options
         this.setState({
-          options: data.options
+          twitchDetails: data.twitchDetails,
+          initialOptions: data.options,
+          currentOptions: data.options,
         })
       })
   
@@ -57,7 +60,7 @@ export default class App extends Component {
   
  this.updateOptions = async () => {
     options.history = true
-    console.log(options, "options line 28")
+    // console.log(options, "options line 28")
     fetch('http://localhost:3001/update', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -69,12 +72,15 @@ export default class App extends Component {
 }
 
   render() {
-    console.log(this.state.userInfo)
     return (
       <div>
-      {this.state.userInfo ?
+      {this.state.initialOptions ?
       //  <button onClick={this.updateOptions}>update</button>
-       <Main data={this.state} switchHandler={this.switchHandler} />
+       <Main  initialOptions={this.state.initialOptions}
+              currentOptions={this.state.currentOptions}
+              data={this.state} 
+              switchHandler={this.switchHandler}
+              areIdenticalObjects={this.areIdenticalObjects} />
        : null
       }
      

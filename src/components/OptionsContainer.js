@@ -2,6 +2,7 @@ import React from 'react'
 import CommandsContainer from './CommandsContainer'
 import ChannelPointsContainer from './ChannelPointsContainer'
 import OtherContainer from './OtherContainer'
+import SaveButton from './SaveButton'
 
 export default function OptionsContainer(props) {
     return (
@@ -12,6 +13,10 @@ export default function OptionsContainer(props) {
             <ChannelPointsContainer data={props.data} switchHandler={props.switchHandler}/>
             <h1>Other Options</h1>
             <OtherContainer data={props.data} switchHandler={props.switchHandler}/>
+            
+            {props.areIdenticalObjects() && <SaveButton />}
+            {/* {console.log(props.areIdenticalObjects)} */}
+            
         </div>
     )
 }

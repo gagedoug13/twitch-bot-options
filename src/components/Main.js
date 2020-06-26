@@ -7,7 +7,12 @@ export default function Main(props) {
     return (
         <div className='mainDiv'>
             {/* <Nav /> */}
-            <OptionsContainer data={props.data} switchHandler={props.switchHandler} />
+            
+            <OptionsContainer data={props.data} 
+                              switchHandler={props.switchHandler}
+                              currentOptions={props.currentOptions}
+                              initialOptions={props.initialOptions}
+                              areIdenticalObjects={props.areIdenticalObjects} />
 
             <BotButtonsContainer />
 
