@@ -8,7 +8,7 @@ export default function ChannelPointsContainer(props) {
                 <h2 className='rewardDescription'>Create a secret word.</h2>
 
                 <label className="switch">
-                    <input type="checkbox" name='secretWord' onChange={props.switchHandler}/>
+                    <input type="checkbox" name='secretWord' checked={props.currentOptions.secretWord} onChange={props.switchHandler}/>
                     <span className="slider round"></span>
                 </label>
             </div>
@@ -17,7 +17,7 @@ export default function ChannelPointsContainer(props) {
                 <h2 className='rewardDescription'>Spam something in chat 10 times.</h2>
 
                 <label className="switch">
-                    <input type="checkbox" name='spamMessage' onChange={props.switchHandler}/>
+                    <input type="checkbox" name='spamMessage' checked={props.currentOptions.spamMessage} onChange={props.switchHandler}/>
                     <span className="slider round"></span>
                 </label>
             </div>

@@ -6,16 +6,28 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
         twitchDetails: null,
         initialOptions: null,
-        currentOptions: null,
-      
+        currentOptions: null
     };
-
-    // this.areIdenticalObjects = this.areIdenticalObjects.bind(this)
   }
   
+  saveChanges = async(event) => {
+    const response = await fetch('http://localhost:3001/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(this.state.currentOptions),
+      credentials: 'include',
+    })
+    const data = await response.json()
+    if (data.updated) {
+      this.setState({
+        initialOptions: this.state.currentOptions
+      })
+    }
+  }
+  
+
 
   areIdenticalObjects = () => {
     return Object.keys(this.state.initialOptions).some(key => 
@@ -56,31 +68,33 @@ export default class App extends Component {
         })
       })
   
+    }
   
   
- this.updateOptions = async () => {
-    options.history = true
-    // console.log(options, "options line 28")
-    fetch('http://localhost:3001/update', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(options),
-      credentials: 'include',
-    })
-  }
+//  this.updateOptions = async () => {
+    
+//     // console.log(options, "options line 28")
+//     fetch('http://localhost:3001/update', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify(options),
+//       credentials: 'include',
+//     })
+//   }
 
-}
 
   render() {
     return (
       <div>
+        {console.log(this.state)}
       {this.state.initialOptions ?
       //  <button onClick={this.updateOptions}>update</button>
        <Main  initialOptions={this.state.initialOptions}
               currentOptions={this.state.currentOptions}
               data={this.state} 
               switchHandler={this.switchHandler}
-              areIdenticalObjects={this.areIdenticalObjects} />
+              areIdenticalObjects={this.areIdenticalObjects}
+              saveChanges={this.saveChanges} />
        : null
       }
      

@@ -8,13 +8,13 @@ export default function OptionsContainer(props) {
     return (
         <div className='optionsContainer'>
             <h1>Commands</h1>
-            <CommandsContainer data={props.data} switchHandler={props.switchHandler} />
+            <CommandsContainer currentOptions={props.currentOptions} switchHandler={props.switchHandler} />
             <h1>Channel Points</h1>
-            <ChannelPointsContainer data={props.data} switchHandler={props.switchHandler}/>
+            <ChannelPointsContainer currentOptions={props.currentOptions} switchHandler={props.switchHandler}/>
             <h1>Other Options</h1>
-            <OtherContainer data={props.data} switchHandler={props.switchHandler}/>
+            <OtherContainer currentOptions={props.currentOptions} switchHandler={props.switchHandler}/>
             
-            {props.areIdenticalObjects() && <SaveButton />}
+            {props.areIdenticalObjects() && <SaveButton saveChanges={props.saveChanges} />}
             {/* {console.log(props.areIdenticalObjects)} */}
             
         </div>

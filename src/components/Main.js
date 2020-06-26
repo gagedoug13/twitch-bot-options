@@ -12,7 +12,8 @@ export default function Main(props) {
                               switchHandler={props.switchHandler}
                               currentOptions={props.currentOptions}
                               initialOptions={props.initialOptions}
-                              areIdenticalObjects={props.areIdenticalObjects} />
+                              areIdenticalObjects={props.areIdenticalObjects}
+                              saveChanges={props.saveChanges} />
 
             <BotButtonsContainer />
 

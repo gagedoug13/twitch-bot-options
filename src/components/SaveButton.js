@@ -3,7 +3,7 @@ import React from 'react'
 export default function SaveOptionsButton(props) {
     return (
         <div>
-            <button>Save Options</button>
+            <button onClick={props.saveChanges}>Save Options</button>
         </div>
     )
 }

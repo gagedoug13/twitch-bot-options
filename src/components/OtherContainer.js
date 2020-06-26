@@ -8,7 +8,7 @@ export default function OtherContainer(props) {
                 <h2 className='commandDescription'>Award a viewer with points.</h2>
 
                 <label className="switch">
-                    <input type="checkbox" name='awardPoints' onChange={props.switchHandler}/>
+                    <input type="checkbox" name='awardPoints' checked={props.currentOptions.awardPoints} onChange={props.switchHandler}/>
                     <span className="slider round"></span>
                 </label>
             </div>
@@ -18,7 +18,7 @@ export default function OtherContainer(props) {
                 <h2 className='commandDescription'>robot_ape will reply to you with a random message from chat history.</h2>
 
                 <label className="switch">
-                    <input type="checkbox" name='atRobotApe' onChange={props.switchHandler}/>
+                    <input type="checkbox" name='atRobotApe' checked={props.currentOptions.atRobotApe} onChange={props.switchHandler}/>
                     <span className="slider round"></span>
                 </label>
             </div>
