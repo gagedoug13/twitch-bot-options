@@ -15,7 +15,6 @@ export default function OptionsContainer(props) {
             <OtherContainer currentOptions={props.currentOptions} switchHandler={props.switchHandler}/>
             
             {props.areIdenticalObjects() && <SaveButton saveChanges={props.saveChanges} />}
-            {/* {console.log(props.areIdenticalObjects)} */}
             
         </div>
     )

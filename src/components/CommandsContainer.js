@@ -5,7 +5,6 @@ export default function CommandsContainer(props) {
         <div className='commandsContainer'>
             {console.log(props.currentOptions.history)}
             <div className='eachCommandContainer'>
-
                 <div className='commandNameContainer'>
                     <h1>!history</h1>
                 </div>
@@ -23,7 +22,6 @@ export default function CommandsContainer(props) {
             </div>
             
             <div className='eachCommandContainer'>
-
                 <div className='commandNameContainer'>
                     <h1>!slots</h1>
                 </div>
@@ -56,10 +54,7 @@ export default function CommandsContainer(props) {
                         <span className="slider round"></span>
                     </label>
                 </div>
-
             </div>
-            
-           
         </div>
     )
 }

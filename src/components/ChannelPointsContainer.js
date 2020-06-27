@@ -4,7 +4,6 @@ export default function ChannelPointsContainer(props) {
     return (
         <div className='channelPointsContainer'>
             <div className='eachRewardContainer'>
-
                 <div className='commandNameContainer'>
                     <h1>Secret Word</h1>
                 </div>
@@ -19,10 +18,9 @@ export default function ChannelPointsContainer(props) {
                         <span className="slider round"></span>
                     </label>
                 </div>
-
             </div>
-            <div className='eachRewardContainer'>
 
+            <div className='eachRewardContainer'>
                 <div className='commandNameContainer'>
                     <h1>Spam</h1>
                 </div>
@@ -37,7 +35,6 @@ export default function ChannelPointsContainer(props) {
                         <span className="slider round"></span>
                     </label>
                 </div>
-
             </div>
         </div>
     )

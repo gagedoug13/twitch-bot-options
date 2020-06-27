@@ -26,8 +26,6 @@ export default class App extends Component {
       })
     }
   }
-  
-
 
   areIdenticalObjects = () => {
     return Object.keys(this.state.initialOptions).some(key => 
@@ -36,7 +34,6 @@ export default class App extends Component {
   }
 
   switchHandler = (event) => {
-    // console.log(event.target.checked, "target value")
     
     this.setState({
         currentOptions: {
@@ -44,7 +41,6 @@ export default class App extends Component {
           [event.target.name]: event.target.checked
         }
     })
-    
   } 
   
   componentDidMount() {
@@ -57,7 +53,6 @@ export default class App extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        // console.log(data)
         
         this.setState({
           twitchDetails: data.twitchDetails,
@@ -65,20 +60,7 @@ export default class App extends Component {
           currentOptions: data.options,
         })
       })
-  
     }
-  
-  
-//  this.updateOptions = async () => {
-    
-//     // console.log(options, "options line 28")
-//     fetch('http://localhost:3001/update', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify(options),
-//       credentials: 'include',
-//     })
-//   }
 
 
   render() {

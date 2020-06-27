@@ -22,7 +22,6 @@ export default function OtherContainer(props) {
             </div>
 
             <div className='eachOtherContainer'>
-
                 <div className='commandNameContainer'>
                     <h1>@robot_ape</h1>
                 </div>
