@@ -51,8 +51,6 @@ export default class App extends Component {
     let code = window.location.search.split('&')[0].split('=')[1]
     window.history.replaceState({ id: 'dashboard' }, 'Dashboard', 'http://localhost:3002')
   
-    var options = null
-  
     fetch(`http://localhost:3001/useroptions?${code ? 'code=' + code : ''}`, {
       // mode: 'no-cors',
       credentials: 'include'
@@ -60,7 +58,7 @@ export default class App extends Component {
       .then(response => response.json())
       .then(data => {
         // console.log(data)
-        options = data.options
+        
         this.setState({
           twitchDetails: data.twitchDetails,
           initialOptions: data.options,

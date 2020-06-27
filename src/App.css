@@ -121,7 +121,7 @@ table {
   background: white;
 }
 
-.eachCommandContainer {
+.eachCommandContainer, .eachRewardContainer, .eachOtherContainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -129,21 +129,15 @@ table {
   background: grey;
 }
 
-.eachRewardContainer {
+
+.commandNameContainer, .commandDescriptionContainer, .commandButtonContainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 10vh;
-  background: grey;
+  width: 30vw;
 }
 
-.eachOtherContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 10vh;
-  background: grey;
-}
 
 .commandDescription {
   text-align: center;
