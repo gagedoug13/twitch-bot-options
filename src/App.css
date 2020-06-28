@@ -69,7 +69,7 @@ table {
   align-items: center; */
   height: 100%;
   width: 100vw;
-  background: gray;
+  background: darkgray;
 }
 
 .robotIntroduction {
@@ -90,7 +90,7 @@ table {
   /* align-items: center; */
   height: 100%;
   width: 85vw;
-  background: white;
+  background: whitesmoke;
   margin-left: 5vw;
 }
 
@@ -100,7 +100,7 @@ table {
   margin-bottom: 5vh;
   margin-top: 1vh;
   margin-left: 1vh;
-  background: lightgrey;
+  background: darkcyan;
 }
 
 .channelPointsContainer {
@@ -109,7 +109,7 @@ table {
   margin-bottom: 5vh;
   margin-top: 1vh;
   margin-left: 1vh;
-  background: white;
+  background: purple;
 }
 
 .otherContainer {
@@ -126,7 +126,7 @@ table {
   align-items: center;
   justify-content: space-evenly;
   height: 10vh;
-  background: grey;
+  background: darkgrey;
 }
 
 
@@ -267,4 +267,8 @@ input:checked + .slider:before {
   display:block;
   margin:0.2em auto;
   }
+}
+
+.questionMark {
+  height: 10vh;
 }
