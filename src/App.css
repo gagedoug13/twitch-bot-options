@@ -269,6 +269,3 @@ input:checked + .slider:before {
   }
 }
 
-.questionMark {
-  height: 10vh;
-}
