@@ -90,14 +90,14 @@ table {
   justify-content: center; */
   /* align-items: center; */
   height: 100%;
-  width: 85vw;
+  width: 90vw;
   background: whitesmoke;
   margin-left: 5vw;
 }
 
 .commandsContainer {
   height: 100%;
-  width: 80vw;
+  width: 84vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
   margin-left: 3vw;
@@ -106,7 +106,7 @@ table {
 
 .channelPointsContainer {
   height: 100%;
-  width: 80vw;
+  width: 84vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
   margin-left: 3vw;
@@ -115,7 +115,7 @@ table {
 
 .otherContainer {
   height: 100%;
-  width: 80vw;
+  width: 84vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
   margin-left: 3vw;
@@ -144,6 +144,10 @@ table {
 
 .commandDescription {
   text-align: center;
+}
+
+.optionsTitle {
+  margin-left: 3vw;
 }
 
 
