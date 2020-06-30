@@ -50,25 +50,26 @@ table {
 
 .App {
   height: 100vh;
+  width: 100vw;
   text-align: center;
   background-color: grey;
 }
 
-.navDiv {
+/* .navDiv {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 5vh;
   width: 100vw;
   background-color: orange;
-}
+} */
 
 .mainDiv {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   height: 100%;
-  width: 100vw;
+  width: 100%;
   background: darkgray;
 }
 
@@ -99,7 +100,7 @@ table {
   width: 80vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
-  margin-left: 3vh;
+  margin-left: 3vw;
   background: darkcyan;
 }
 
@@ -108,7 +109,7 @@ table {
   width: 80vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
-  margin-left: 3vh;
+  margin-left: 3vw;
   background: purple;
 }
 
@@ -117,7 +118,7 @@ table {
   width: 80vw;
   margin-bottom: 5vh;
   margin-top: 1vh;
-  margin-left: 3vh;
+  margin-left: 3vw;
   background: white;
 }
 

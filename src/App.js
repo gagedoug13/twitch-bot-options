@@ -65,7 +65,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         {console.log(this.state)}
       {this.state.initialOptions ?
       //  <button onClick={this.updateOptions}>update</button>
