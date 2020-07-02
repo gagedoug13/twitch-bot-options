@@ -70,7 +70,7 @@ table {
   /* align-items: center; */
   height: 100%;
   width: 100%;
-  background: darkgray;
+  background: black;
 }
 
 .robotIntroduction {
@@ -91,7 +91,7 @@ table {
   /* align-items: center; */
   height: 100%;
   width: 90vw;
-  background: whitesmoke;
+  background: white;
   margin-left: 5vw;
 }
 
