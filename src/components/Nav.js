@@ -5,13 +5,13 @@ export default function Nav() {
     return (
         <div className='navDiv'>
             <div className='aboutDiv'>
-                <h2>About</h2>
+                <h2>Robot History</h2>
             </div>
             <div className='optionsDiv'>
-                <h2>Robot Ape Options</h2>
+                <h2>Custom Commmand</h2>
             </div>
             <div className='merchDiv'>
-                <h2>Merch</h2>
+                <h2>Settings</h2>
             </div>
             <div className='navButtonDiv'>
                 <button className='navButton'>MB</button>
