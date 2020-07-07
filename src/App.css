@@ -55,14 +55,14 @@ table {
   background-color: grey;
 }
 
-.navDiv {
+/* .navDiv {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 5vh;
   width: 100vw;
   background-color: orange;
-}
+} */
 
 .mainDiv {
   /* display: flex; */
