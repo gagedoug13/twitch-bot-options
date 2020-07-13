@@ -3,6 +3,7 @@ import React from 'react'
 export default function ChannelPointsContainer(props) {
     return (
         <div className='channelPointsContainer'>
+            <h1>NOTE: When adding these channel point rewards, you must use the EXACT name of the reward.</h1>
             <div className='eachRewardContainer'>
                 <div className='commandNameContainer'>
                     <h1>Secret Word</h1>

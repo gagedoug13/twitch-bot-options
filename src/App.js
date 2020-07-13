@@ -7,7 +7,7 @@ export default class App extends Component {
     super(props);
     this.state = {
         twitchDetails: null,
-        initialOptions: null,
+        initialOptions: true,
         currentOptions: null
     };
   }
