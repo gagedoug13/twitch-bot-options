@@ -7,7 +7,7 @@ export default class App extends Component {
     super(props);
     this.state = {
         twitchDetails: null,
-        initialOptions: true,
+        initialOptions: null,
         currentOptions: null
     };
   }
@@ -53,7 +53,7 @@ export default class App extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        
+        console.log(data)
         this.setState({
           twitchDetails: data.twitchDetails,
           initialOptions: data.options,

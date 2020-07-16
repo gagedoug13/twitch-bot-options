@@ -3,7 +3,7 @@ import React from 'react'
 export default function CommandsContainer(props) {
     return (
         <div className='commandsContainer'>
-            {console.log(props.currentOptions.history)}
+           
             <div className='eachCommandContainer'>
                 <div className='commandNameContainer'>
                     <h1>!history</h1>
@@ -15,7 +15,7 @@ export default function CommandsContainer(props) {
                 
                 <div className='commandButtonContainer'>
                     <label className="switch">
-                        <input type="checkbox" name='history' checked={props.currentOptions.history}  onChange={props.switchHandler}/>
+                        <input type="checkbox" name='history'   onChange={props.switchHandler}/>
                         <span className="slider round"></span>
                     </label>
                 </div>
@@ -32,7 +32,7 @@ export default function CommandsContainer(props) {
 
                 <div className='commandButtonContainer'>
                     <label className="switch">
-                        <input type="checkbox" name='slots' checked={props.currentOptions.slots} onChange={props.switchHandler}/>
+                        <input type="checkbox" name='slots'  onChange={props.switchHandler}/>
                         <span className="slider round"></span>
                     </label>
                 </div>
