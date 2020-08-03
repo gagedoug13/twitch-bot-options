@@ -222,7 +222,7 @@ input:checked + .slider:before {
 }
   .signOutButton:hover{
   border-color: black;
-  color: black;
+  color: white;
   }
   .signOutButton:active{
   border-color: white;
