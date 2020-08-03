@@ -39,6 +39,7 @@ export default function ChannelPointsContainer(props) {
                     </label>
                 </div>
             </div>
+            
         </div>
     )
 }

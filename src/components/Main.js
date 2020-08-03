@@ -11,7 +11,6 @@ export default function Main(props) {
                               initialOptions={props.initialOptions}
                               areIdenticalObjects={props.areIdenticalObjects}
                               saveChanges={props.saveChanges} />
-
             <BotButtonsContainer />
         </div>
     )

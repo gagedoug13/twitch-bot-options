@@ -13,10 +13,7 @@ export default function OptionsContainer(props) {
             <ChannelPointsContainer currentOptions={props.currentOptions} switchHandler={props.switchHandler}/>
             <h1 className='optionsTitle'>Other Options</h1>
             <OtherContainer currentOptions={props.currentOptions} switchHandler={props.switchHandler}/>
-            
-            {props.areIdenticalObjects() && <SaveButton saveChanges={props.saveChanges} />}
-           
-            
+            {props.areIdenticalObjects() && <SaveButton saveChanges={props.saveChanges} />}    
         </div>
     )
 }

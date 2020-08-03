@@ -38,7 +38,6 @@ export default function CommandsContainer(props) {
                 </div>
             </div>
             
-            
             <div className='eachCommandContainer'>
                 <div className='commandNameContainer'>
                     <h1>!trivia</h1>
