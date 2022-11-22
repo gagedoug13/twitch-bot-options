@@ -10,7 +10,7 @@
     "react-burger-menu": "^2.6.17",
     "react-cookie": "^4.0.3",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "SET PORT=3002 && react-scripts start",
